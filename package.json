@@ -1,0 +1,42 @@
+{
+  "name": "neutron",
+  "version": "1.0.0",
+  "description": "Minimal JavaScript project setup",
+  "author": {
+    "name": "Alberto Basalo",
+    "email": "learn@bitademy.com",
+    "url": "https://twitter.com/bit_ademy"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AtomicBuilders/neutron/issues"
+  },
+  "homepage": "https://github.com/AtomicBuilders/neutron#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomicBuilders/neutron.git"
+  },
+  "keywords": [
+    "JS",
+    "JavaScript",
+    "Seed",
+    "Template"
+  ],
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --watch -o",
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "jest": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@types/jest": "^24.0.23",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  }
+}
