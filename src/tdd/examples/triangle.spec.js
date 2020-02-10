@@ -8,6 +8,44 @@ I want to:  check the kind of any triangle
 So:         I can learn about its geometry
 */
 
+// Scenario: I have an invalid triangle
+describe('GIVEN: a Triangle class called with ceros', () => {
+  // Arrange
+  const triangle = new Triangle(0, 0, 0);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => {
+        //Act
+        triangle.kind();
+      }).toThrow(); // assert
+    });
+  });
+});
+describe('GIVEN: a Triangle class called negative values', () => {
+  // Arrange
+  const triangle = new Triangle(-2, -3, -4);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => {
+        //Act
+        triangle.kind();
+      }).toThrow(); // assert
+    });
+  });
+});
+describe('GIVEN: a Triangle class called with no Triangle inequality values', () => {
+  // Arrange
+  const triangle = new Triangle(2, 3, 9);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => {
+        //Act
+        triangle.kind();
+      }).toThrow(); // assert
+    });
+  });
+});
+
 // Scenario: I have a valid triangle with three sides
 describe('GIVEN: a Triangle class called with three legal values', () => {
   // Arrange
@@ -88,43 +126,6 @@ describe('GIVEN: a Triangle class called with no equal values', () => {
       const expected = 'scalene';
       // assert
       expect(actual).toBe(expected);
-    });
-  });
-});
-// Scenario: I have an invalid triangle
-describe('GIVEN: a Triangle class called with ceros', () => {
-  // Arrange
-  const triangle = new Triangle(0, 0, 0);
-  describe('WHEN: i ask for the kind', () => {
-    test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
-    });
-  });
-});
-describe('GIVEN: a Triangle class called negative values', () => {
-  // Arrange
-  const triangle = new Triangle(-2, -3, -4);
-  describe('WHEN: i ask for the kind', () => {
-    test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
-    });
-  });
-});
-describe('GIVEN: a Triangle class called with no Triangle inequality values', () => {
-  // Arrange
-  const triangle = new Triangle(2, 3, 9);
-  describe('WHEN: i ask for the kind', () => {
-    test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
     });
   });
 });

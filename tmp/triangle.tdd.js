@@ -22,21 +22,20 @@ export class Triangle {
     return 'scalene';
   }
 
-  hasTwoSidesEqual() {
-    return this.s1 === this.s2 || this.s1 === this.s3 || this.s2 === this.s3;
+  isInvalid() {
+    const NULL_SIZE = 0;
+    return this.s1 <= NULL_SIZE || this.s2 <= 0 || this.s3 <= 0;
   }
-
-  hasAllSidesEqual() {
-    return this.s1 === this.s2 && this.s2 === this.s3;
-  }
-
   brakesTriangleRules() {
     return (
       this.s1 + this.s2 < this.s3 || this.s1 + this.s3 < this.s2 || this.s2 + this.s3 < this.s1
     );
   }
+  hasAllSidesEqual() {
+    return this.s1 === this.s2 && this.s2 === this.s3;
+  }
 
-  isInvalid() {
-    return this.s1 <= 0 || this.s2 <= 0 || this.s3 <= 0;
+  hasTwoSidesEqual() {
+    return this.s1 === this.s2 || this.s1 === this.s3 || this.s2 === this.s3;
   }
 }
