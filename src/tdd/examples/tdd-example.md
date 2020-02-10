@@ -2,6 +2,10 @@
 
 > See history commits
 
+> Make it a task
+
+> Use triangle as an example
+
 - [tdd-hamming-dna](https://github.com/AcademiaBinaria/unit-test/blob/master/tdd/teacher/hamming-dna.spec.js)
 
 ## Funcional tests already done
