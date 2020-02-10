@@ -1,3 +1,5 @@
+/* eslint-disable no-magic-numbers */
+/* eslint-disable max-nested-callbacks */
 import { Triangle } from './triangle';
 /*
 FEATURE:    Determine if a triangle is equilateral, isosceles, or scalene.

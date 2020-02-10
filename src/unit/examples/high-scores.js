@@ -12,8 +12,9 @@ export class HighScores {
   }
 
   get personalBest() {
-    let best = 0;
-    for (let i = 0; i < this._scores[this._scores.length - 1]; i++) {
+    const MINIMUM = 0;
+    let best = MINIMUM;
+    for (let i = MINIMUM; i < this._scores[this._scores.length - 1]; i++) {
       if (best < this._scores[i]) {
         best = this._scores[i];
       }
@@ -27,7 +28,9 @@ export class HighScores {
     temp.sort(function(a, b) {
       return b - a;
     });
-    for (let i = 0; i < 3; i++) {
+    const MINIMUM = 0;
+    const MAXIMUN = 3;
+    for (let i = MINIMUM; i < MAXIMUN; i++) {
       if (temp[i] !== undefined) {
         result.push(temp[i]);
       } else {
