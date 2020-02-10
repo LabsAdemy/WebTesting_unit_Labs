@@ -27,7 +27,7 @@
       - _Given_ a Triangle class called with only last two equal values
       - _When_ i ask for the kind
       - _Then_ should return _isosceles_
-      - _Given_ a Triangle class called with only first and laste equal values
+      - _Given_ a Triangle class called with only first and last equal values
       - _When_ i ask for the kind
       - _Then_ should return _isosceles_
     - **Scenario:** I have a valid triangle with no equal sides
@@ -37,11 +37,9 @@
 
 ### Boss
 
-- **Scenario:** I have an invalid triangle
-
 <!-- https://jestjs.io/docs/en/expect#tothrowerror  -->
 
-- **Scenario:** have an invalid triangle
+- **Scenario:** I have an invalid triangle
 
   - _Given_ a Triangle class called with ceros
   - _When_ i ask for the kind
