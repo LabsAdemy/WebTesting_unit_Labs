@@ -61,7 +61,7 @@ describe('GIVEN: a HighScores class with a small array of scores', () => {
   describe('WHEN: I ask for the top three', () => {
     //Act
     const actual = sut.personalTopThree;
-    test('THEN: should return all the scores', () => {
+    test('THEN: should return only the two available scores', () => {
       const expected = [70, 30];
       // assert
       expect(actual).toEqual(expected);

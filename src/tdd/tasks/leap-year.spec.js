@@ -20,7 +20,7 @@ describe('GIVEN: a year', () => {
     const input = 1971;
     //Act
     const actual = null; // sut.isLeap(input);
-    test.skip('THEN: expect to not be leap', () => {
+    test('THEN: expect to not be leap', () => {
       const expected = false;
       // assert
       expect(actual).toEqual(expected);

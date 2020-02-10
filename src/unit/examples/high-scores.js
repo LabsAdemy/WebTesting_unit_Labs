@@ -24,19 +24,24 @@ export class HighScores {
 
   get personalTopThree() {
     let result = [];
-    let temp = [...this._scores];
-    temp.sort(function(a, b) {
-      return b - a;
-    });
+    let sortedScores = this.getSortedScores();
     const MINIMUM = 0;
     const MAXIMUN = 3;
     for (let i = MINIMUM; i < MAXIMUN; i++) {
-      if (temp[i] !== undefined) {
-        result.push(temp[i]);
+      if (sortedScores[i] !== undefined) {
+        result.push(sortedScores[i]);
       } else {
         break;
       }
     }
     return result;
+  }
+
+  getSortedScores() {
+    let temp = [...this._scores];
+    temp.sort(function(a, b) {
+      return b - a;
+    });
+    return temp;
   }
 }
