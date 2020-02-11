@@ -1,10 +1,6 @@
 # Teacher Example
 
-## SUT
-
-- [high-scores.js](https://github.com/LabsAdemy/WebTesting_unit_Labs/blob/master/src/tdd/examples/triangle.js)
-
-## Functional tests to be done
+## Functional tests done
 
 ### Beginner
 
@@ -51,4 +47,4 @@
   - _When_ i ask for the kind
   - _Then_ should throw an error
 
-- [unit-highscores](https://github.com/LabsAdemy/WebTesting_unit_Labs/blob/master/src/unit/tasks/triangle.spec.js)
+## SUT : To be coded
