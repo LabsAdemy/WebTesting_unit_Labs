@@ -14,10 +14,8 @@ describe('GIVEN: a Triangle class called with ceros', () => {
   const triangle = new Triangle(0, 0, 0);
   describe('WHEN: i ask for the kind', () => {
     test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
+      expect(() => triangle.kind()) // act
+        .toThrow(); // assert
     });
   });
 });
@@ -26,10 +24,8 @@ describe('GIVEN: a Triangle class called negative values', () => {
   const triangle = new Triangle(-2, -3, -4);
   describe('WHEN: i ask for the kind', () => {
     test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
+      expect(() => triangle.kind()) // act
+        .toThrow(); // assert
     });
   });
 });
@@ -38,10 +34,8 @@ describe('GIVEN: a Triangle class called with no Triangle inequality values', ()
   const triangle = new Triangle(2, 3, 9);
   describe('WHEN: i ask for the kind', () => {
     test('THEN: should throw an error', () => {
-      expect(() => {
-        //Act
-        triangle.kind();
-      }).toThrow(); // assert
+      expect(() => triangle.kind()) // act
+        .toThrow(); // assert
     });
   });
 });
