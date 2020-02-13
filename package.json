@@ -1,7 +1,7 @@
 {
   "name": "web_testing_unit_labs",
   "version": "1.0.0",
-  "description": "Minimal JavaScript project setup",
+  "description": "Unit and tdd laboratory",
   "author": {
     "name": "Alberto Basalo",
     "email": "learn@bitademy.com",
@@ -9,12 +9,12 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AtomicBuilders/WebTesting_unit_Labs/issues"
+    "url": "https://github.com/LabsAdemy/WebTesting_unit_Labs/issues"
   },
-  "homepage": "https://github.com/AtomicBuilders/WebTesting_unit_Labs#readme",
+  "homepage": "https://github.com/LabsAdemy/WebTesting_unit_Labs#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AtomicBuilders/WebTesting_unit_Labs.git"
+    "url": "git+https://github.com/LabsAdemy/WebTesting_unit_Labs.git"
   },
   "keywords": [
     "JS",
