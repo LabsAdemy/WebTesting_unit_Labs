@@ -1,7 +1,7 @@
 {
   "workbench.colorCustomizations": {
     "editorError.foreground": "#907080",
-    "editorWarning.foreground": "#708090"
+    "editorWarning.foreground": "#708090",
     "activityBar.background": "#fbed80",
     "activityBar.activeBorder": "#06b9a5",
     "activityBar.foreground": "#15202b",
@@ -18,7 +18,7 @@
   },
   "peacock.color": "#f9e64f",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Winter is Coming (Light)",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "prettier.useEditorConfig": true,

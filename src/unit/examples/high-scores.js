@@ -14,7 +14,7 @@ export class HighScores {
   get personalBest() {
     const MINIMUM = 0;
     let best = MINIMUM;
-    for (let i = MINIMUM; i < this._scores[this._scores.length - 1]; i++) {
+    for (let i = MINIMUM; i < this._scores.length - 1; i++) {
       if (best < this._scores[i]) {
         best = this._scores[i];
       }

@@ -1,21 +1,23 @@
 /* eslint-disable no-magic-numbers */
 /* eslint-disable max-nested-callbacks */
+// /* eslint-disable no-magic-numbers */
+// /* eslint-disable max-nested-callbacks */
 import { Triangle } from './triangle';
-/*
-FEATURE:    Determine if a triangle is equilateral, isosceles, or scalene.
-Aa a:       math student
-I want to:  check the kind of any triangle
-So:         I can learn about its geometry
-*/
+// /*
+// FEATURE:    Determine if a triangle is equilateral, isosceles, or scalene.
+// Aa a:       math student
+// I want to:  check the kind of any triangle
+// So:         I can learn about its geometry
+// */
 
-// Scenario: I have an invalid triangle
+// // Scenario: I have an invalid triangle
 describe('GIVEN: a Triangle class called with ceros', () => {
   // Arrange
   const triangle = new Triangle(0, 0, 0);
   describe('WHEN: i ask for the kind', () => {
     test('THEN: should throw an error', () => {
       expect(() => triangle.kind()) // act
-        .toThrow(); // assert
+        .toThrow('Invalid Triangle: 0 0 0'); // assert
     });
   });
 });
@@ -25,10 +27,41 @@ describe('GIVEN: a Triangle class called negative values', () => {
   describe('WHEN: i ask for the kind', () => {
     test('THEN: should throw an error', () => {
       expect(() => triangle.kind()) // act
+        .toThrow('Invalid Triangle: -2 -3 -4'); // assert
+    });
+  });
+});
+describe('GIVEN: a Triangle class 2 first  less than third', () => {
+  // Arrange
+  const triangle = new Triangle(2, 3, 9);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => triangle.kind()) // act
         .toThrow(); // assert
     });
   });
 });
+describe('GIVEN: a Triangle class 2 last  less than first', () => {
+  // Arrange
+  const triangle = new Triangle(9, 3, 2);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => triangle.kind()) // act
+        .toThrow(); // assert
+    });
+  });
+});
+describe('GIVEN: a Triangle class 2 border  less than inner', () => {
+  // Arrange
+  const triangle = new Triangle(-3, 9, 2);
+  describe('WHEN: i ask for the kind', () => {
+    test('THEN: should throw an error', () => {
+      expect(() => triangle.kind()) // act
+        .toThrow(); // assert
+    });
+  });
+});
+
 describe('GIVEN: a Triangle class called with no Triangle inequality values', () => {
   // Arrange
   const triangle = new Triangle(2, 3, 9);
@@ -40,7 +73,7 @@ describe('GIVEN: a Triangle class called with no Triangle inequality values', ()
   });
 });
 
-// Scenario: I have a valid triangle with three sides
+// // Scenario: I have a valid triangle with three sides
 describe('GIVEN: a Triangle class called with three legal values', () => {
   // Arrange
   const triangle = new Triangle(1, 2, 3);
@@ -55,7 +88,7 @@ describe('GIVEN: a Triangle class called with three legal values', () => {
     });
   });
 });
-// Scenario: I have a valid triangle with three equal sides
+// // Scenario: I have a valid triangle with three equal sides
 describe('GIVEN: a Triangle class called with three equal values', () => {
   // Arrange
   const triangle = new Triangle(3, 3, 3);
@@ -69,7 +102,7 @@ describe('GIVEN: a Triangle class called with three equal values', () => {
     });
   });
 });
-// Scenario: I have a valid triangle with two equal sides
+// // Scenario: I have a valid triangle with two equal sides
 describe('GIVEN: a Triangle class called with only first two equal values', () => {
   // Arrange
   const triangle = new Triangle(3, 3, 4);
@@ -109,7 +142,7 @@ describe('GIVEN: a Triangle class called with only first and last equal values',
     });
   });
 });
-// Scenario: I have a valid triangle with no equal sides
+// // Scenario: I have a valid triangle with no equal sides
 describe('GIVEN: a Triangle class called with no equal values', () => {
   // Arrange
   const triangle = new Triangle(3, 4, 5);
@@ -123,3 +156,19 @@ describe('GIVEN: a Triangle class called with no equal values', () => {
     });
   });
 });
+
+class Child {
+  readFile() {
+    return '';
+  }
+}
+
+class Parent {
+  constructor(child) {
+    this.child = child; //= new Child();
+  }
+
+  getData() {
+    return this.child.readFile();
+  }
+}

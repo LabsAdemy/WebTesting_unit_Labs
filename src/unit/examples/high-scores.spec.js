@@ -13,14 +13,14 @@ So:         I can track my progress
 // Scenario: I have a lot of scores
 describe('GIVEN: a HighScores class with a big array of scores', () => {
   // Arrange
-  const input = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 90, 70];
+  const input = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 90, 70, 1];
   const sut = new HighScores(input);
   describe('WHEN: I ask for the scores', () => {
     //Act
     const actual = sut.scores;
     console.log({ actual });
-    test('THEN: should return the list of scores ordered', () => {
-      const expected = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 90, 70];
+    test('THEN: should return the list of scores', () => {
+      const expected = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 90, 70, 1];
       // assert
       expect(actual).toEqual(expected);
     });
@@ -29,7 +29,7 @@ describe('GIVEN: a HighScores class with a big array of scores', () => {
     //Act
     const actual = sut.latest;
     test('THEN: should return the last one', () => {
-      const expected = 70;
+      const expected = 1;
       // assert
       expect(actual).toEqual(expected);
     });
