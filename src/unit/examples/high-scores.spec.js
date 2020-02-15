@@ -18,6 +18,7 @@ describe('GIVEN: a HighScores class with a big array of scores', () => {
   describe('WHEN: I ask for the scores', () => {
     //Act
     const actual = sut.scores;
+    console.log({ actual });
     test('THEN: should return the list of scores ordered', () => {
       const expected = [10, 30, 90, 30, 100, 20, 10, 0, 30, 40, 40, 70, 90, 70];
       // assert
