@@ -56,3 +56,9 @@ yarn test
 ---
 
 [bit_ademy](https://bitademy.com)
+
+### VS Code recommended extensions
+
+- orta.vscode-jest
+- dbaeumer.vscode-eslint
+- esbenp.prettier-vscode

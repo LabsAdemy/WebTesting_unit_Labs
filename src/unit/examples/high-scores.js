@@ -39,7 +39,7 @@ export class HighScores {
 
   getSortedScores() {
     let temp = [...this._scores];
-    temp.sort(function(a, b) {
+    temp.sort(function (a, b) {
       return b - a;
     });
     return temp;
