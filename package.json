@@ -25,6 +25,7 @@
   "scripts": {
     "test": "jest --watch -o",
     "test:basic": "jest src/unit/basic/basic.spec.js --watch -o",
+    "coverage": "jest src/unit/basic/basic.spec.js --collect-coverage",
     "format": "prettier --write \"./**/*.{js,json}\"",
     "jest": "jest",
     "lint": "eslint src/**/*.js"
