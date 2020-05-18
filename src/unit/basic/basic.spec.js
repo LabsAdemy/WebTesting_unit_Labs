@@ -34,6 +34,13 @@ describe('GIVEN: a basic object with a previous balance of 6', () => {
     const expected = 2;
     expect(actual).toEqual(expected);
   });
+  test('WHEN: make a withdraw of 8 THEN should have a balance of -2', () => {
+    const input = 8;
+    basic.withdraw(input);
+    const actual = basic.balance;
+    const expected = -2;
+    expect(actual).toEqual(expected);
+  });
 });
 
 describe('GIVEN: a basic object with a previous balance of 10 WHEN: i ask for a borrow of 4', () => {
