@@ -72,8 +72,7 @@ describe('GIVEN: a Triangle class called with no Triangle inequality values', ()
     });
   });
 });
-
-// // Scenario: I have a valid triangle with three sides
+// Scenario: I have a valid triangle with three sides
 describe('GIVEN: a Triangle class called with three legal values', () => {
   // Arrange
   const triangle = new Triangle(1, 2, 3);
@@ -88,7 +87,7 @@ describe('GIVEN: a Triangle class called with three legal values', () => {
     });
   });
 });
-// // Scenario: I have a valid triangle with three equal sides
+// Scenario: I have a valid triangle with three equal sides
 describe('GIVEN: a Triangle class called with three equal values', () => {
   // Arrange
   const triangle = new Triangle(3, 3, 3);
@@ -102,7 +101,7 @@ describe('GIVEN: a Triangle class called with three equal values', () => {
     });
   });
 });
-// // Scenario: I have a valid triangle with two equal sides
+// Scenario: I have a valid triangle with two equal sides
 describe('GIVEN: a Triangle class called with only first two equal values', () => {
   // Arrange
   const triangle = new Triangle(3, 3, 4);
@@ -156,19 +155,3 @@ describe('GIVEN: a Triangle class called with no equal values', () => {
     });
   });
 });
-
-class Child {
-  readFile() {
-    return '';
-  }
-}
-
-class Parent {
-  constructor(child) {
-    this.child = child; //= new Child();
-  }
-
-  getData() {
-    return this.child.readFile();
-  }
-}
