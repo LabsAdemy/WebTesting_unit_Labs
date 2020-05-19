@@ -1,4 +1,4 @@
-import { BankClient } from './bank-client';
+import { BankClient } from '../bank-client';
 
 let sutBankClient;
 describe('GIVEN: a new BankClient WHEN: i deposit 20', () => {

@@ -1,6 +1,6 @@
-import { Account } from './account';
-import { BankClient } from './bank-client';
-import { Loan } from './loan';
+import { Account } from '../account';
+import { BankClient } from '../bank-client';
+import { Loan } from '../loan';
 jest.mock('./account');
 jest.mock('./loan');
 
