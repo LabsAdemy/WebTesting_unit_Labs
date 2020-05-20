@@ -1,6 +1,6 @@
-import { BankClient } from './bank-client';
-import { postTransaction } from './bank-service';
-jest.mock('./bank-service');
+import { BankClient } from '../bank-client';
+import { postTransaction } from '../bank-service';
+jest.mock('../bank-service');
 let sut;
 
 describe('GIVEN: a BankClient class', () => {

@@ -1,4 +1,4 @@
-import { getAllTransactions, postTransaction } from './bank-service';
+import { getAllTransactions, postTransaction } from '../bank-service';
 describe('GIVEN: a connected Bank service', () => {
   beforeAll(() => {
     fetchMock.dontMock();

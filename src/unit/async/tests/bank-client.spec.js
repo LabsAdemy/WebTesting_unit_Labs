@@ -1,4 +1,4 @@
-import { BankClient } from './bank-client';
+import { BankClient } from '../bank-client';
 let sut;
 describe('GIVEN: a BankClient system', () => {
   beforeAll(() => {

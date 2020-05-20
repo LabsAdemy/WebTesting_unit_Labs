@@ -1,4 +1,4 @@
-import { getAllTransactions } from './bank-service';
+import { getAllTransactions } from '../bank-service';
 
 describe('GIVEN: a disconnected Bank service', () => {
   beforeAll(() => {
