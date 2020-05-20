@@ -1,8 +1,8 @@
 import { Account } from '../account';
 import { BankClient } from '../bank-client';
 import { Loan } from '../loan';
-jest.mock('./account');
-jest.mock('./loan');
+jest.mock('../account');
+jest.mock('../loan');
 let sutBankClient;
 let mockAccountInstance;
 let spyDepositMethod;
