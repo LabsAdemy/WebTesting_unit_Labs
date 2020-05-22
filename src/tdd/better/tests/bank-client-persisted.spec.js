@@ -5,6 +5,27 @@
 
 import { BankClient } from '../bank-client-persisted';
 
+describe('GIVEN: a calculate balance function', () => {
+  test('WHEN i have a transactions array THEN it calculates the balance', () => {
+    const input = [{ _id: 1, amount: 12 }];
+    const sut = new BankClient();
+    const actual = sut.calculateBalance(input);
+    const expected = 12;
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe('GIVEN: a BankClient class with load logic', () => {
+  test('WHEN i create a new instance THEN it loads the data and calculates the balance', () => {
+    const fakePreviousTransactions = [{ _id: 1, amount: 12 }];
+    const getAllTransactions = () => fakePreviousTransactions;
+    const sut = new BankClient(getAllTransactions);
+    const calculateBalanceSpy = jest.spyOn(sut, 'calculateBalance');
+    sut.load();
+    expect(calculateBalanceSpy).toHaveBeenCalledWith(fakePreviousTransactions);
+  });
+});
+
 describe('GIVEN: a BankClient system with a previous saved transaction of 12', () => {
   let sut;
   beforeEach(() => {

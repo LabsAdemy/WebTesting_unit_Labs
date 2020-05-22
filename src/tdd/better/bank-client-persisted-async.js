@@ -2,13 +2,18 @@ export class BankClient {
   constructor(getAllTransactions, saveTransaction) {
     this.getAllTransactions = getAllTransactions;
     this.saveTransaction = saveTransaction;
+    this.balance = 0;
   }
   async load() {
     const transactions = await this.getAllTransactions();
+    this.calculateBalance(transactions);
+  }
+  calculateBalance(transactions) {
     this.balance = transactions.reduce(
       (runningBalance, transaction) => runningBalance + transaction.amount,
-      0
+      this.balance
     );
+    return this.balance;
   }
   deposit(amount) {
     const transaction = { amount };

@@ -6,11 +6,16 @@ export class BankClient {
   }
   load() {
     const transactions = this.getAllTransactions();
+    this.calculateBalance(transactions);
+  }
+  calculateBalance(transactions) {
     this.balance = transactions.reduce(
       (runningBalance, transaction) => runningBalance + transaction.amount,
       this.balance
     );
+    return this.balance;
   }
+
   deposit(amount) {
     const transaction = { amount };
     this.saveTransaction(transaction);
