@@ -30,17 +30,6 @@ test('add numbers async', done => {
 
 ## Promises
 
-`sut.js`
-
-```js
-function addAsync(a, b, callback) {
-  setTimeout(() => {
-    const result = a + b;
-    callback(result);
-  }, 500);
-}
-```
-
 `sut.test.js`
 
 ```js
@@ -58,17 +47,6 @@ test('should reject to error', () => {
 ---
 
 ## Async / Await
-
-`sut.js`
-
-```js
-function addAsync(a, b, callback) {
-  setTimeout(() => {
-    const result = a + b;
-    callback(result);
-  }, 500);
-}
-```
 
 `sut.test.js`
 
