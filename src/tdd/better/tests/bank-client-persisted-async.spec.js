@@ -16,7 +16,7 @@ describe('GIVEN: a calculate balance function', () => {
 });
 
 describe('GIVEN: a BankClient class with load logic', () => {
-  test('WHEN i create a new instance THEN it loads the data and calculates the balance', async () => {
+  test('WHEN i asynchronously load the transactions THEN waits for the data and calculates the balance', async () => {
     const fakePreviousTransactions = [{ _id: 1, amount: 12 }];
     const getAllTransactions = () => fakePreviousTransactions;
     const sut = new BankClient(getAllTransactions);
