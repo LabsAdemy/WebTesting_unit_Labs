@@ -1,4 +1,4 @@
-const { Account } = require('./bank/account');
+import { Account } from './bank/account';
 
 describe('a new account with a deposit', () => {
   const sut = new Account();

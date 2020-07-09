@@ -6,14 +6,17 @@ export class Account {
     this._clerk = new Clerk(credit, this._transactions.getAll());
   }
   deposit(amount) {
-    this._transactions.store({ type: 'deposit', amount });
+    this.store({ type: 'deposit', amount });
   }
   withdraw(amount) {
     if (this._clerk.isAllowed(amount)) {
-      this._transactions.store({ type: 'withdraw', amount });
+      this.store({ type: 'withdraw', amount });
     } else {
       throw 'insufficient credit ';
     }
+  }
+  store(transaction) {
+    this._transactions.store(transaction);
   }
   getBalance() {
     return this._clerk.calculateBalance();
