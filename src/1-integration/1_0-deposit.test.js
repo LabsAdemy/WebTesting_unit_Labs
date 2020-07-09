@@ -1,23 +1,29 @@
 import { Account } from './bank/account';
 
-describe('a new account with a deposit', () => {
+describe('GIVEN a new account with a deposit', () => {
+  test('SHOULD have the correct balance', () => {});
+});
+
+describe('GIVEN a new account with a deposit', () => {
   const sut = new Account();
   const input = 20;
   sut.deposit(input);
-  test('should have the correct balance', () => {
+  test('SHOULD have the correct balance', () => {
     const actual = sut.getBalance();
     const expected = 20;
     expect(actual).toBe(expected);
   });
 });
 
-describe('a new account with two deposits', () => {
+describe('GIVEN a new account with two deposits', () => {
   const sut = new Account();
-  const input = 20;
-  sut.deposit(input);
-  test('should accumulate the amounts in the balance', () => {
+  const inputA = 20;
+  sut.deposit(inputA);
+  const inputB = 10;
+  sut.deposit(inputB);
+  test('SHOULD accumulate the amounts in the balance', () => {
     const actual = sut.getBalance();
-    const expected = 20;
+    const expected = 30;
     expect(actual).toBe(expected);
   });
 });
