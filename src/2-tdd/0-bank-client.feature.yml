@@ -1,0 +1,4 @@
+FEATURE: a BankClient account
+  As a: high level service
+  I want to: have a class where deposit money
+  In order to: accumulate several amounts of money for later
