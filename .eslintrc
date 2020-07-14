@@ -17,7 +17,7 @@
     "complexity": ["error", { "max": 8 }],
     "max-depth": ["error", 2],
     "max-lines": ["warn", 160],
-    "max-lines-per-function": ["warn", 50],
+    "max-lines-per-function": ["warn", 64],
     "max-nested-callbacks": ["error", 3],
     "max-params": ["warn", 3],
     "no-magic-numbers": [
@@ -31,7 +31,7 @@
     "@typescript-eslint/no-explicit-any": "off"
   },
   "parserOptions": {
-    "ecmaVersion": 9,
+    "ecmaVersion": 10,
     "sourceType": "module",
     "ecmaFeatures": {
       "modules": true
