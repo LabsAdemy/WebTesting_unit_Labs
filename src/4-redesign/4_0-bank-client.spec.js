@@ -1,4 +1,4 @@
-import { BankClient } from './3_1-bank-client';
+import { BankClient } from './4_0-bank-client';
 describe(`GIVEN a Bank Client class`, () => {
   test('WHEN I make a deposit of 10 THEN any new instance should returns the running balance of 10', () => {
     const inputStore = {
